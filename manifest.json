@@ -2,5 +2,9 @@
     "name": "VK Feed Blocker",
     "description": "Block distractional VK feed",
     "version": "1.0",
-    "manifest_version": 3
+    "manifest_version": 3,
+    "background":
+    {
+        "service_worker": "service.js"
+    }
 }
