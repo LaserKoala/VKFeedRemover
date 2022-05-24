@@ -1,0 +1,6 @@
+[{
+    "id": 1,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "url": "https://vk.com/im" } },
+    "condition": { "urlFilter": "vk.com/feed", "resourceTypes": ["main_frame"] }
+}]

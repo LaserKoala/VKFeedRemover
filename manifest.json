@@ -3,8 +3,23 @@
     "description": "Block distractional VK feed",
     "version": "1.0",
     "manifest_version": 3,
-    "background":
-    {
-        "service_worker": "service.js"
-    }
+    "declarative_net_request": {
+        "rule_resources": [{
+          "id": "rule_1",
+          "enabled": true,
+          "path": "redirect.json"
+        }]
+    },
+    "permissions": [
+        "activeTab",
+        "webRequest",
+        "declarativeNetRequest"
+    ],
+    "host_permissions": [
+        "*://vk.com/*"
+    ],
+    "content_scripts": [{
+        "matches": ["*://vk.com/*"],
+        "js": ["removeFeed.js"]
+    }]
 }
